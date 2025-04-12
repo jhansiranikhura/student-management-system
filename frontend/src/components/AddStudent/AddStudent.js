@@ -25,7 +25,8 @@ export default function AddStudent() {
         };
 
         axios
-            .post("http://localhost:8070/student/add", newStudent)
+            // .post("http://localhost:8070/student/add", newStudent)
+            .post("https://student-management-system-19cu.onrender.com/student/add", newStudent)
             .then(() => {
                 alert("Student Added");
                 // Clear the form after successful submission
