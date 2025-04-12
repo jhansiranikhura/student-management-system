@@ -54,7 +54,8 @@ app.post("/upload-profile-image", upload.single("profileImage"), (req, res) => {
 const PORT = process.env.PORT || 8070;
 const URL = process.env.MONGODB_URI;
 
-mongoose.connect(process.env.MONGODB_URI, {
+// mongoose.connect(process.env.MONGODB_URI, {
+    mongoose.connect("mongodb+srv://tinygigglemug:Jhansi@studentcluster.idbajho.mongodb.net/?retryWrites=true&w=majority&appName=studentCluster", {
     useCreateIndex: true,
     useNewUrlParser: true,
     useUnifiedTopology: true,
