@@ -24,9 +24,11 @@ export default function AddStudent() {
             contactNumber
         };
 
+        // axios.get(`${process.env.REACT_APP_API_BASE_URL}/student/`)
+        //     // .post("http://localhost:8070/student/add", newStudent)
+        //     .post("https://student-management-system-19cu.onrender.com/student/add", newStudent)
         axios
-            // .post("http://localhost:8070/student/add", newStudent)
-            .post("https://student-management-system-19cu.onrender.com/student/add", newStudent)
+  .post(`${process.env.REACT_APP_API_BASE_URL}/student/add`, newStudent)
             .then(() => {
                 alert("Student Added");
                 // Clear the form after successful submission
